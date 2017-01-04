@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加密/解密工具箱</title>
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <script src="javascript/md5.js"></script>
+    <script src="javascript/sha1.js"></script>
+    <script src="javascript/sha256.js"></script>
+    <script src="javascript/sha512.js"></script>
+    <script src="javascript/base64.js"></script>
+</head>
+<body>
+    <div class="am-tabs" style="width: 560px;height: 350px;" id="doc-my-tabs">
+        <ul class="am-tabs-nav am-nav am-nav-tabs">
+            <li class="am-active"><a href="#tab1">加密</a></li>
+            <li><a href="#tab2">解密</a></li>
+        </ul>
+
+        <div class="am-tabs-bd">
+            <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+                <form class="am-form">
+                    <fieldset>
+                        <div class="am-form-group">
+                            <label for="Entype">加密算法</label>
+                            <select id="Entype">
+                                <option value="url">url编码</option>
+                                <option value="base64">base64编码</option>
+                                <option value="md5">md5哈希</option>
+                                <option value="sha1">sha1哈希</option>
+                                <option value="sha256">sha256哈希</option>
+                                <option value="sha512">sha512哈希</option>
+                            </select>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="Eninput">明文</label>
+                            <textarea id="Eninput" rows="3"></textarea>
+                        </div>
+
+                        <div class="am-form-group">
+                            <button id="Encrypt" class="am-btn am-btn-danger">加密</button>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="Enoutput">密文</label>
+                            <textarea id="Enoutput" rows="3"></textarea>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+            <div class="am-tab-panel am-fade" id="tab2">
+                <form class="am-form">
+                    <fieldset>
+                        <div class="am-form-group">
+                            <label for="Detype">解密算法</label>
+                            <select id="Detype">
+                                <option value="url">url解码</option>
+                                <option value="base64">base64解码</option>
+                            </select>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="Deinput">密文</label>
+                            <textarea id="Deinput" rows="3"></textarea>
+                        </div>
+
+                        <div class="am-form-group">
+                            <button id="Decrypt" class="am-btn am-btn-success">解密</button>
+                        </div>
+
+                        <div class="am-form-group">
+                            <label for="Deoutput">明文</label>
+                            <textarea id="Deoutput" rows="3"></textarea>
+                        </div>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/amazeui.min.js"></script>
+<script src="javascript/index.js"></script>
+</html>
